@@ -351,9 +351,35 @@ body {
       -ms-flex-align: center;
           align-items: center; }
   .glass__photo {
-    position: relative; }
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .glass__number {
-    position: absolute; }
+    width: 75px;
+    height: 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: none;
+    position: absolute;
+    font-size: 112px;
+    border-color: #000000;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 48px; }
   .glass__button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -379,7 +405,7 @@ body {
       margin-top: 45px; }
     .glass__button--remove {
       margin-top: 38px;
-      color: #F5E5E7;
+      color: #ffffff;
       width: 184px;
       height: 23px;
       background: none;
