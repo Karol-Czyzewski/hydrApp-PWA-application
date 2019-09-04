@@ -33,10 +33,23 @@ body {
   align-items: center;
   &__photo {
     position: relative;
+    display: flex;
+    justify-content: center;
   }
 
   &__number {
+    width: 75px;
+    height: 130px;
+    display: flex;
+    background: none;
     position: absolute;
+    font-size: 112px;
+    border-color: #000000;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 48px; 
   }
 
   &__button {
@@ -58,7 +71,7 @@ body {
     }
     &--remove {
       margin-top:38px; 
-      color: #F5E5E7;
+      color: #ffffff;
       width: 184px;
       height: 23px;
       background: none;
