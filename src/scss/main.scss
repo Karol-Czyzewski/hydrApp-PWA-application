@@ -38,8 +38,8 @@ body {
   }
 
   &__number {
-    width: 75px;
-    height: 130px;
+    width: 90px;
+    height: 150px;
     display: flex;
     background: none;
     position: absolute;
@@ -50,6 +50,8 @@ body {
     text-align: center;
     align-items: center;
     margin-top: 48px; 
+    resize: none;
+    border: none; 
   }
 
   &__button {
