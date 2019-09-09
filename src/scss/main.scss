@@ -2,6 +2,39 @@
 @import "_variables";
 @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=latin-ext');
 
+@keyframes header { 
+
+  0%{
+    transform: scale(1) ;
+  }
+  35%{
+    transform: scale(1.05);
+  }
+  70%{
+    transform: scale(.9);
+  }
+  100%{
+    transform: scale(1);
+  }
+};
+
+
+@keyframes svg {
+ 
+  0%{
+    fill: #2196F3;
+  }
+  30%{
+    fill: rgb(0, 132, 240);
+  }
+  60%{
+    fill:  rgb(1, 111, 201);
+  }
+  100%{
+    fill: #2196F3;
+  }
+}
+
 
 html {
   box-sizing: border-box;
@@ -25,6 +58,7 @@ body {
 
 .header {
   font-size: 48px;
+  animation: header 3s linear;
 }
 
 .glass {
@@ -32,6 +66,7 @@ body {
   flex-direction: column;
   align-items: center;
   &__photo {
+    
     position: relative;
     display: flex;
     justify-content: center;
@@ -59,27 +94,47 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
     &--add {
       background: #ffffff;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
-      width: 216px;
+      width: 280px;
       height: 48px;
       font-style: normal;
       font-size: 18px;
       line-height: 21px;
       color: #000000;
       margin-top:45px;
+      transition: transform .3s ease-in-out;
+      &:hover{
+        transform: scale(1.05); 
+      }
     }
     &--remove {
       margin-top:38px; 
       margin-bottom: 12px;
       color: #ffffff;
-      width: 184px;
-      height: 23px;
+      width: 280px;
+      height: 48px;
       background: none;
       border: none; 
+      transition: transform .3s ease-in-out;
+      &:hover{
+        transform: scale(1.05); 
     }
   }
+}}
+
+.list{
+  margin-top: 16px; 
+  width: 280px;
+  height: 140px;
+  resize: none;
+}
+
+
+.svg{
+animation: svg 20s ease-in-out; 
 }

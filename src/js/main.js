@@ -17,13 +17,15 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 const number = document.querySelector('.glass__numberinput--js');
-const plus = document.querySelector('.glass__button--add--js');
-const remove = document.querySelector('.glass__button--remove--js');
+const plus = document.querySelector('.glass__button--add-js');
+const remove = document.querySelector('.glass__button--remove-js');
 const header = document.querySelector('.header--js');
 const value = 0; value >= 9;
 const endOfdrink = 9
+const list = document.querySelector('.list-js')
+let key = new Date (). toISOString () .slice (0, 10);
 
-number.innerHTML = `${value}`;
+
 
 plus.addEventListener('click', (e) => {
 
@@ -33,10 +35,16 @@ plus.addEventListener('click', (e) => {
     number.innerHTML = `${endOfdrink}`;
   }
    
-  localStorage.setItem(new Date (). toISOString () .slice (0, 10), `${number.innerHTML}`);
-
+  localStorage.setItem(key, `${number.innerHTML}`);
+  list.innerHTML = key + ` you drink ${number.innerHTML} cups of water`
 });
 
+if (!localStorage.getItem(key)) {
+  localStorage.setItem(key, 0)
+  number.innerHTML = `${value}`;
+} else {
+  number.innerHTML = localStorage.getItem(key); 
+}
 
 remove.addEventListener('click', () => {
 
@@ -45,13 +53,12 @@ remove.addEventListener('click', () => {
   if (number.innerHTML < 0) {
     number.innerHTML = `${value}`;
   }
-
-  localStorage.setItem(new Date (). toISOString () .slice (0, 10), `${number.innerHTML}`);
+  list.innerHTML = key + ` you drink ${number.innerHTML} cups of water`
+  localStorage.setItem(key, `${number.innerHTML}`);
 
 });
 
-
-const key = new Date (). toISOString () .slice (0, 10); 
+list.innerHTML = key + ` you drink ${localStorage.getItem(key)} cups of water`
 
 //if (localStorage.getItem('glass')) {
 //  number.value = localStorage.getItem('glass')
