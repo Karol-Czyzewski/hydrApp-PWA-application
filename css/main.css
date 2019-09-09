@@ -308,6 +308,54 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes header {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  35% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes header {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  35% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@-webkit-keyframes svg {
+  0% {
+    fill: #2196F3; }
+  30% {
+    fill: #0084f0; }
+  60% {
+    fill: #016fc9; }
+  100% {
+    fill: #2196F3; } }
+
+@keyframes svg {
+  0% {
+    fill: #2196F3; }
+  30% {
+    fill: #0084f0; }
+  60% {
+    fill: #016fc9; }
+  100% {
+    fill: #2196F3; } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -337,7 +385,9 @@ body {
   min-height: 100vh; }
 
 .header {
-  font-size: 48px; }
+  font-size: 48px;
+  -webkit-animation: header 3s linear;
+          animation: header 3s linear; }
 
 .glass {
   display: -webkit-box;
@@ -359,6 +409,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center; }
   .glass__number {
+    color: #000000;
     width: 90px;
     height: 150px;
     display: -webkit-box;
@@ -398,19 +449,48 @@ body {
       -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
-      width: 216px;
+      width: 280px;
       height: 48px;
       font-style: normal;
       font-size: 18px;
       line-height: 21px;
       color: #000000;
-      margin-top: 45px; }
+      margin-top: 45px;
+      -webkit-transition: -webkit-transform .3s ease-in-out;
+      transition: -webkit-transform .3s ease-in-out;
+      -o-transition: transform .3s ease-in-out;
+      transition: transform .3s ease-in-out;
+      transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out; }
+      .glass__button--add:hover {
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05); }
     .glass__button--remove {
       margin-top: 38px;
+      margin-bottom: 12px;
       color: #ffffff;
-      width: 184px;
-      height: 23px;
+      width: 280px;
+      height: 48px;
       background: none;
-      border: none; }
+      border: none;
+      -webkit-transition: -webkit-transform .3s ease-in-out;
+      transition: -webkit-transform .3s ease-in-out;
+      -o-transition: transform .3s ease-in-out;
+      transition: transform .3s ease-in-out;
+      transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out; }
+      .glass__button--remove:hover {
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05); }
+
+.list {
+  margin-top: 16px;
+  width: 280px;
+  height: 140px;
+  resize: none; }
+
+.svg {
+  -webkit-animation: svg 20s ease-in-out;
+          animation: svg 20s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */
