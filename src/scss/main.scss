@@ -1,40 +1,36 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=latin-ext");
 
-@keyframes header { 
-
-  0%{
-    transform: scale(1) ;
-  }
-  35%{
-    transform: scale(1.05);
-  }
-  70%{
-    transform: scale(.9);
-  }
-  100%{
+@keyframes header {
+  0% {
     transform: scale(1);
   }
-};
-
-
-@keyframes svg {
- 
-  0%{
-    fill: #2196F3;
+  35% {
+    transform: scale(1.05);
   }
-  30%{
-    fill: rgb(0, 132, 240);
+  70% {
+    transform: scale(0.9);
   }
-  60%{
-    fill:  rgb(1, 111, 201);
-  }
-  100%{
-    fill: #2196F3;
+  100% {
+    transform: scale(1);
   }
 }
 
+@keyframes svg {
+  0% {
+    fill: #2196f3;
+  }
+  30% {
+    fill: rgb(0, 132, 240);
+  }
+  60% {
+    fill: rgb(1, 111, 201);
+  }
+  100% {
+    fill: #2196f3;
+  }
+}
 
 html {
   box-sizing: border-box;
@@ -50,7 +46,7 @@ body {
   background: #3767ad;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -66,7 +62,6 @@ body {
   flex-direction: column;
   align-items: center;
   &__photo {
-    
     position: relative;
     display: flex;
     justify-content: center;
@@ -85,16 +80,15 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin-top: 48px; 
+    margin-top: 48px;
     resize: none;
-    border: none; 
+    border: none;
   }
 
   &__button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 
     &--add {
       background: #ffffff;
@@ -106,35 +100,35 @@ body {
       font-size: 18px;
       line-height: 21px;
       color: #000000;
-      margin-top:45px;
-      transition: transform .3s ease-in-out;
-      &:hover{
-        transform: scale(1.05); 
+      margin-top: 45px;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
       }
     }
     &--remove {
-      margin-top:38px; 
+      margin-top: 38px;
       margin-bottom: 12px;
       color: #ffffff;
       width: 280px;
       height: 48px;
       background: none;
-      border: none; 
-      transition: transform .3s ease-in-out;
-      &:hover{
-        transform: scale(1.05); 
+      border: none;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
-}}
+}
 
-.list{
-  margin-top: 16px; 
+.list {
+  margin-top: 16px;
   width: 280px;
   height: 140px;
   resize: none;
 }
 
-
-.svg{
-animation: svg 20s ease-in-out; 
+.svg {
+  animation: svg 20s ease-in-out;
 }
